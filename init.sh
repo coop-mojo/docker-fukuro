@@ -7,4 +7,5 @@ else
 fi
 
 cd moecoop
+pip3 install -r manual/requirements.txt
 exec bash
