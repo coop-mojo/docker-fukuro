@@ -8,7 +8,7 @@ RUN apt-get install -y wget
 ADD http://master.dl.sourceforge.net/project/d-apt/files/d-apt.list /etc/apt/sources.list.d/d-apt.list
 RUN apt-get update && apt-get -y --allow-unauthenticated install --reinstall d-apt-keyring && apt-get update
 
-RUN apt-get install -y make libsdl2-2.0-0 git python3-pip \
+RUN apt-get install -y make libsdl2-2.0-0 git python3-pip fonts-takao-gothic \
                        dmd-bin dub
 RUN apt-get clean && rm -rf /var/lib/apt/lists/*
 RUN pip3 install --upgrade pip
