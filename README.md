@@ -1,5 +1,5 @@
 # 生協の知恵袋 裁縫セット
-生協の知恵袋の開発環境をひとまとめにした Dockerfile です。
+[生協の知恵袋](https://github.com/coop-mojo/moecoop)の開発環境をひとまとめにした開発キットです。
 
 以下のソフトウェアがインストールされています。
 
@@ -18,5 +18,19 @@ $ sudo docker run -it --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix 
 環境変数 `FUKURO` を変更することで、取得するリポジトリを変更することができます。
 また VOLUME `/work` を変更することで、ローカルのディレクトリに知恵袋のディレクトリを保存できます。
 
+## 実行例
+- ローカルのディレクトリ `~/repository` に知恵袋のリポジトリをダウンロードしたい
+```
+$ sudo docker run -it --rm -v ~/repository:/work -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix moecoop/docker-fukuro
+```
+
+- 知恵袋公式ではなく、フォークした自分のリポジトリをダウンロードしたい
+```
+$ sudo docker run -it --rm -e FUKURO=https://github.com/foobar/moecoop.git -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix moecoop/docker-fukuro
+```
+
+# バグ報告・要望など
+Github の [Issues](https://github.com/coop-mojo/docker-fukuro/issues) にどうぞ！
+
 # ライセンスについて
-このリポジトリは CC0 のもとで公開されています。詳細は[LICENSE](LICENSE)をご覧ください。
+Dockerfile や関連スクリプトは CC0 のもとで公開されています。詳細は[LICENSE](LICENSE)をご覧ください。
