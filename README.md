@@ -12,7 +12,7 @@
 
 ```
 $ xhost local:root
-$ sudo docker run -it --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix moecoop/docker-fukuro
+$ sudo docker run -it --rm -v /tmp/.X11-unix:/tmp/.X11-unix moecoop/docker-fukuro
 ```
 
 環境変数 `FUKURO` を変更することで、取得するリポジトリを変更することができます。
@@ -21,12 +21,12 @@ $ sudo docker run -it --rm -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix 
 ## 実行例
 - ローカルのディレクトリ `~/repository` に知恵袋のリポジトリをダウンロードしたい
 ```
-$ sudo docker run -it --rm -v ~/repository:/work -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix moecoop/docker-fukuro
+$ sudo docker run -it --rm -v ~/repository:/work -v /tmp/.X11-unix:/tmp/.X11-unix moecoop/docker-fukuro
 ```
 
 - 知恵袋公式ではなく、フォークした自分のリポジトリをダウンロードしたい
 ```
-$ sudo docker run -it --rm -e FUKURO=https://github.com/foobar/moecoop.git -e DISPLAY=$DISPLAY -v /tmp/.X11-unix:/tmp/.X11-unix moecoop/docker-fukuro
+$ sudo docker run -it --rm -e FUKURO=https://github.com/foobar/moecoop.git -v /tmp/.X11-unix:/tmp/.X11-unix moecoop/docker-fukuro
 ```
 
 # バグ報告・要望など

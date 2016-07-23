@@ -15,6 +15,7 @@ RUN pip3 install --upgrade pip
 
 RUN locale-gen ja_JP.UTF-8
 ENV LANG ja_JP.UTF-8
+ENV DISPLAY :0
 
 RUN mkdir /work
 
