@@ -22,7 +22,6 @@ ENV FUKURO https://github.com/coop-mojo/moecoop.git
 
 RUN mkdir /work
 VOLUME /work
-
 WORKDIR /work
 
 COPY init.sh /
