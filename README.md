@@ -11,8 +11,9 @@
 
 # 推奨環境
 - Linux
-  - Docker
-  - Xサーバー
+  - [Docker](https://www.docker.com/)
+  - [Xサーバー](https://www.x.org/wiki/)
+      - 通常はどちらも、パッケージ管理システム経由でインストールできます。
 
 - Windows
   - [Docker toolbox](https://www.docker.com/products/docker-toolbox)
