@@ -8,11 +8,29 @@
 - git: バージョン管理システム
 - 他色々
 
+# 推奨環境
+- Linux
+  - Docker
+  - Xサーバー
+
+- Windows
+  - [Docker toolbox](https://www.docker.com/products/docker-toolbox)
+  - [Xming-mesa](http://www.straightrunning.com/XmingNotes/)
+
 # 動かし方
 
+Linux 環境:
 ```
 $ xhost local:root
 $ sudo docker run -it --rm -v /tmp/.X11-unix:/tmp/.X11-unix moecoop/docker-fukuro
+```
+
+Windows 環境 (`$ip` は手元の PC の IP アドレス):
+```
+$ export DISPLAY=$ip:0.0
+$ export PATH=/c/Program\ Files\ \(x86\)/Xming:$PATH
+$ run Xming :0 -multiwindow -ac -clipboard
+$ docker run -it --rm -e DISPLAY=$DISPLAY moecoop/docker-fukuro
 ```
 
 環境変数 `FUKURO` を変更することで、取得するリポジトリを変更することができます。

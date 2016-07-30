@@ -20,9 +20,10 @@ ENV LANG ja_JP.UTF-8
 ENV DISPLAY :0
 ENV FUKURO https://github.com/coop-mojo/moecoop.git
 
-VOLUME /root
+RUN mkdir /work
+VOLUME /work
 
-WORKDIR /root
+WORKDIR /work
 
 COPY init.sh /
 CMD ["/init.sh"]
