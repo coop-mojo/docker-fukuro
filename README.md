@@ -55,7 +55,7 @@ $ sudo docker run -it --rm -e FUKURO=https://github.com/foobar/moecoop.git -v /t
 
 # KNOWN BUG
 - ビルドした知恵袋に日本語を入力できない
-  - お裁縫セットのバグではなく、Linux 版の知恵袋にある問題です。
+  - お裁縫セットのバグではなく、Linux 版の知恵袋にある問題です ([知恵袋のIssue](https://github.com/coop-mojo/moecoop/issues/27))。
   - メモ帳などから入力した文字列をコピーするか、Migemo 検索を使って対処してください。
 
 # バグ報告・要望など
