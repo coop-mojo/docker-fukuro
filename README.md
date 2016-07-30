@@ -6,6 +6,7 @@
 - dmd: D言語のコンパイラ
 - dub: D言語のビルドシステム
 - git: バージョン管理システム
+- Sphinx: ドキュメント生成システム
 - 他色々
 
 # 推奨環境
@@ -46,6 +47,15 @@ $ sudo docker run -it --rm -v ~/repository:/work -v /tmp/.X11-unix:/tmp/.X11-uni
 ```
 $ sudo docker run -it --rm -e FUKURO=https://github.com/foobar/moecoop.git -v /tmp/.X11-unix:/tmp/.X11-unix moecoop/docker-fukuro
 ```
+
+# FAQ
+- エディタは？
+  - あえて入れていません。手元にあるお好きなエディタをお使いください。
+
+# KNOWN BUG
+- ビルドした知恵袋に日本語を入力できない
+  - お裁縫セットのバグではなく、Linux 版の知恵袋にある問題です。
+  - メモ帳などから入力した文字列をコピーするか、Migemo 検索を使って対処してください。
 
 # バグ報告・要望など
 Github の [Issues](https://github.com/coop-mojo/docker-fukuro/issues) にどうぞ！
