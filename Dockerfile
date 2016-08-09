@@ -8,10 +8,7 @@ ADD http://master.dl.sourceforge.net/project/d-apt/files/d-apt.list /etc/apt/sou
 RUN apt-get update && apt-get -y --allow-unauthenticated install --reinstall apt-utils d-apt-keyring && apt-get update
 
 RUN apt-get install -y make libsdl2-2.0-0 git python3-pip fonts-takao-gothic dmd-bin dub cmigemo
-RUN pip3 install --upgrade pip
-
-ADD https://raw.githubusercontent.com/coop-mojo/moecoop/master/manual/requirements.txt requirements.txt
-RUN pip3 install -r requirements.txt && rm requirements.txt
+RUN pip3 install --upgrade pip && pip3 install mkdocs
 
 RUN apt-get purge -y apt-utils && apt-get clean && rm -rf /tmp/* /var/tmp/* /var/lib/apt/lists/* dub.sdl
 
